@@ -1,0 +1,28 @@
+# ~/.config/ghostty/config
+
+# Online documentation:
+# https://ghostty.org/docs/config/reference
+
+auto-update-channel=stable
+
+theme="Tomorrow Night"
+font-family="JetBrains Mono"
+font-size=14
+font-thicken=true
+font-thicken-strength=100
+cursor-style=block
+cursor-style-blink=false
+background=#272a2c
+window-height=55
+window-width=225
+window-save-state=always
+adjust-cell-width=-14%
+adjust-cell-height=-2
+
+shell-integration-features=no-cursor
+
+keybind = cmd+shift+left=previous_tab
+keybind = cmd+shift+right=next_tab
+keybind = cmd+f=write_scrollback_file:open
+
+selection-foreground = cell-foreground

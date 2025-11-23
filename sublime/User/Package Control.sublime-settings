@@ -1,0 +1,30 @@
+{
+    "installed_packages": [
+        "Alignment",
+        "Autotools",
+        "Case Conversion",
+        "DocBlockr",
+        "Dockerfile Syntax Highlighting",
+        "GitGutter",
+        "LSP",
+        "LSP-bash",
+        "LSP-dockerfile",
+        "LSP-json",
+        "LSP-terraform",
+        "LSP-typescript",
+        "LSP-yaml",
+        "Package Control",
+        "PHP Namespace Monkey",
+        "PhpNamespace",
+        "PHPUnit Completions",
+        "Pretty JSON",
+        "SideBarEnhancements",
+        "SingleTrailingNewLine",
+        "SublimeLinter-contrib-yamllint",
+        "Terraform",
+        "Xdebug Client"
+    ],
+    "in_process_packages":
+    [
+    ],
+}

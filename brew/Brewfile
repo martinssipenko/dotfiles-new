@@ -1,0 +1,29 @@
+# Taps
+tap "warrensbox/tap"
+
+# Apps (casks)
+cask "1password"
+cask "1password-cli"
+cask "antigravity"
+cask "chatgpt"
+cask "codex"
+cask "docker-desktop"
+cask "ghostty"
+cask "google-chrome"
+cask "ngrok"
+cask "slack"
+cask "sublime-text"
+cask "whatsapp"
+
+# CLI tools
+brew "awscli"
+brew "composer"
+brew "bash"
+brew "bash-completion@2"
+brew "gh"
+brew "git"
+brew "php@8.3"
+brew "php@8.4"
+brew "php@8.5"
+brew "tree"
+brew "warrensbox/tap/tfswitch"

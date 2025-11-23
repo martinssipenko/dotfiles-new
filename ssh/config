@@ -1,0 +1,9 @@
+Host *
+  AddKeysToAgent yes
+  ForwardAgent yes
+  IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
+  IgnoreUnknown UseKeychain
+  UseKeychain yes
+
+# Automatically add all common hosts to the host file as they are connected to.
+StrictHostKeyChecking no
