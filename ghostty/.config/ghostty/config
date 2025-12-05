@@ -3,7 +3,7 @@
 # Online documentation:
 # https://ghostty.org/docs/config/reference
 
-auto-update-channel=stable
+auto-update-channel=tip
 
 theme="Tomorrow Night"
 font-family="JetBrains Mono"
