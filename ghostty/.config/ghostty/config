@@ -23,6 +23,6 @@ shell-integration-features=no-cursor
 
 keybind = cmd+shift+left=previous_tab
 keybind = cmd+shift+right=next_tab
-keybind = cmd+f=write_scrollback_file:open
+keybind = cmd+f=start_search
 
 selection-foreground = cell-foreground
