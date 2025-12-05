@@ -188,6 +188,19 @@ setup_directories() {
   info "Using HOMEBREW_PREFIX=${HOMEBREW_PREFIX}"
 }
 
+build_stow_ignore_pattern() {
+  local ignore_file="$DOTFILES_DIR/.stow-global-ignore" patterns=()
+  if [[ -f "$ignore_file" ]]; then
+    while IFS= read -r line; do
+      [[ -z "$line" || "$line" =~ ^[[:space:]]*# ]] && continue
+      patterns+=("$line")
+    done < "$ignore_file"
+  fi
+
+  ((${#patterns[@]})) || return 1
+  (IFS='|'; printf '%s' "${patterns[*]}")
+}
+
 setup_symlinks() {
   log "Setting up symlinks with GNU Stow..."
 
@@ -198,7 +211,10 @@ setup_symlinks() {
     fi
   fi
 
-  local stow_packages=0
+  local stow_packages=0 stow_ignore="" stow_ignore_flag=""
+  if stow_ignore="$(build_stow_ignore_pattern)"; then
+    stow_ignore_flag="--ignore '${stow_ignore}'"
+  fi
   for item in *; do
     # Skip non-directories and known non-stow folders
     if [[ ! -d "$item" ]]; then
@@ -222,9 +238,13 @@ setup_symlinks() {
 
     stow_packages=$((stow_packages + 1))
     if [[ "$DRY_RUN" == "true" ]]; then
-      info "[DRY RUN] Would stow package: $item -> $target"
+      if [[ -n "$stow_ignore_flag" ]]; then
+        info "[DRY RUN] Would stow package: $item -> $target (ignoring ${stow_ignore})"
+      else
+        info "[DRY RUN] Would stow package: $item -> $target"
+      fi
     else
-      run_command "stow -R -t \"$target\" \"$item\"" "Stow package: $item to $target"
+      run_command "stow -R ${stow_ignore_flag} -t \"$target\" \"$item\"" "Stow package: $item to $target"
     fi
   done
 
