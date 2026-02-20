@@ -16,6 +16,7 @@ background=#272a2c
 window-height=55
 window-width=225
 window-save-state=always
+window-padding-y=0,2
 adjust-cell-width=-14%
 adjust-cell-height=-2
 
