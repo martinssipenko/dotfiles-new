@@ -28,3 +28,4 @@ If you edit `Brewfile` or configs, rerun:
 
 ## Notes
 - Repo is designed to be safe to re-run; it will relink configs idempotently.
+- Extra `PATH` entries can be listed in `~/.config/bash/paths` (one path per line, `#` for comments).
