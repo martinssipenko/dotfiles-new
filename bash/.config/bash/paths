@@ -1,2 +1,3 @@
 # Extra PATH entries (one per line).
 ~/.config/composer/vendor/bin
+~/bin
