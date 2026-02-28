@@ -3,7 +3,7 @@ tap "warrensbox/tap"
 
 # Apps (casks)
 cask "1password"
-cask "1password-cli"
+cask "1password-cli@beta"
 cask "antigravity"
 cask "chatgpt"
 cask "codex"
