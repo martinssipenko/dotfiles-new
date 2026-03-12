@@ -72,3 +72,8 @@ function o() {
 function tre() {
     tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" | less -FRNX;
 }
+
+opr() {
+    op run --env-file "${OP_ENV_FILE:-$HOME/.config/1Password/op/env}" -- "$@"
+}
+complete -c opr
