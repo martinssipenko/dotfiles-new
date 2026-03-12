@@ -2,8 +2,8 @@
 tap "warrensbox/tap"
 
 # Apps (casks)
-cask "1password"
 cask "1password-cli@beta"
+cask "1password@beta"
 cask "antigravity"
 cask "chatgpt"
 cask "codex"
