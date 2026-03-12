@@ -10,6 +10,7 @@
         "LSP-bash",
         "LSP-dockerfile",
         "LSP-gopls",
+        "LSP-intelephense",
         "LSP-json",
         "LSP-terraform",
         "LSP-typescript",
