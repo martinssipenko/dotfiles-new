@@ -1,3 +1,4 @@
 CLOUDFLARE_API_TOKEN="op://StackRadar/Cloudflare/API Token"
 OP_ACCOUNT="op://Personal/ggu5ndrrda3mws62c4fhw5mifu/Account ID"
 CLOUDFLARE_TUNNEL_TOKEN="op://SR Local Dev/Cloudflare Tunnel Token/Token"
+LINEAR_API_KEY="op://StackRadar/Linear/API Key"
