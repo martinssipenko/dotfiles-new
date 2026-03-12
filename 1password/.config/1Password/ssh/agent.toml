@@ -1,3 +1,7 @@
 [[ssh-keys]]
 item = "GitHub SSH Key"
 vault = "Personal"
+
+[[ssh-keys]]
+item = "Hetzner SSH Key"
+vault = "StackRadar"
