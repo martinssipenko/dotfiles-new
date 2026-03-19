@@ -99,3 +99,10 @@ alias_eks_login() {
 
 alias eksl=alias_eks_login
 alias k=kubectl
+
+# Optional user-managed aliases file (not tracked by dotfiles):
+#   ~/.config/bash/aliases.local
+if [ -r "${XDG_CONFIG_HOME:-$HOME/.config}/bash/aliases.local" ]; then
+  # shellcheck disable=SC1091
+  source "${XDG_CONFIG_HOME:-$HOME/.config}/bash/aliases.local"
+fi
