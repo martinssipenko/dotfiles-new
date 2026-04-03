@@ -15,6 +15,7 @@
         "LSP-terraform",
         "LSP-typescript",
         "LSP-yaml",
+        "MarkdownPreview",
         "Package Control",
         "PHP Namespace Monkey",
         "PhpNamespace",
@@ -24,7 +25,7 @@
         "SingleTrailingNewLine",
         "SublimeLinter-contrib-yamllint",
         "Terraform",
-        "Xdebug Client"
+        "Xdebug Client",
     ],
     "in_process_packages":
     [
