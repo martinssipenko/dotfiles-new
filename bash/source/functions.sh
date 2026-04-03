@@ -77,3 +77,19 @@ opr() {
     op run --env-file "${OP_ENV_FILE:-$HOME/.config/1Password/op/env}" -- "$@"
 }
 complete -c opr
+
+# Run the repo's bin/workspace helper from the current directory or any parent.
+function ws() {
+    local dir="$PWD"
+
+    while [ "$dir" != "/" ]; do
+        if [ -x "$dir/bin/workspace" ]; then
+            "$dir/bin/workspace" "$@"
+            return $?
+        fi
+        dir="$(dirname "$dir")"
+    done
+
+    printf 'Error: could not find bin/workspace in this directory or any parent\n' >&2
+    return 1
+}
